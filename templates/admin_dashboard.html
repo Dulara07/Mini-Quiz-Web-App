@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Quiz App</h1>
+        <nav class="nav">
+            <a href="/admin_login">Log Out</a>
+        </nav>
+    </header>
+    
+    <h1>Admin Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('view_results') }}">View Results</a></li> 
+            <li><a href="{{ url_for('add_question') }}">Add New Question</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <p>Select one of the options above to manage the quiz application.</p>
+    </section>
+</body>
+</html>

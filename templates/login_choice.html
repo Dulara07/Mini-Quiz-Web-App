@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Login Choice</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Quiz Application     ------------------------------------ </h1>
+        CT/2020/049
+        <nav class="nav">
+            
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to the Quiz Web Application..!</h2>
+        <h3>Choose Potral You Need To Access</h3>
+        <form action="/admin_login" method="GET">
+            <button type="submit">Admin Login</button>
+        </form>
+        <form action="/login" method="GET">
+            <button type="submit">Student Login</button>
+        </form>
+    </main>
+</body>
+</html>

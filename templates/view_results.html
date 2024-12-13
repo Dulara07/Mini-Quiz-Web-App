@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Quiz App</h1>
+        <nav class="nav">
+            <a href="/admin_login">Log Out</a>
+            <a href="/admin_dashboard">Back to Dashboard</a>
+        </nav>
+    </header>
+
+    <h1>Student Results</h1>
+
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+                <tr>
+                    <td>{{ result[0] }}</td>  
+                    <td>{{ result[1] }}</td>  
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

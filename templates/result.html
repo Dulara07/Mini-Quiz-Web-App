@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Result</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Results</h1>
+        <nav class="nav">
+            <a href="/login">Log Out</a>
+        </nav>
+    </header>
+    <h2>Your Score: {{ score }}</h2>
+    <h2>Thank you...!</h2>
+</body>
+</html>

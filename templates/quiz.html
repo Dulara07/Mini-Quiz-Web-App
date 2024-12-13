@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Quiz</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Question Page</h1>
+        <nav class="nav">
+            <a href="/login">Log Out</a>
+        </nav>
+    </header>
+    <form action="/result" method="POST">
+        {% for question in questions %}
+            <div>
+                <p>{{ question[1] }}</p>
+                <input type="radio" name="{{ question[0] }}" value="{{ question[2] }}">{{ question[2] }}<br>
+                <input type="radio" name="{{ question[0] }}" value="{{ question[3] }}">{{ question[3] }}<br>
+                <input type="radio" name="{{ question[0] }}" value="{{ question[4] }}">{{ question[4] }}<br>
+                <input type="radio" name="{{ question[0] }}" value="{{ question[5] }}">{{ question[5] }}<br>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    
+
+</body>
+</html>
